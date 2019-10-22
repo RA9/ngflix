@@ -1,0 +1,18 @@
+<hello name="{{ name }}"></hello>
+<h1>Angular HTTP Basics</h1>
+
+<button (click)="this.appService.getPosts()">Get Posts</button>
+
+<div *ngFor="let post of posts | async">
+
+  {{ post | json }}
+
+</div>
+<div *ngFor="let movie of movies.results">
+  <h1>{{movie.original_title}}</h1>
+  {{movie | json}}
+</div>
+<button (click)="createPost()">Create Post</button>
+<hr>
+
+{{ newPost | async | json }}
