@@ -1,18 +1,13 @@
 <hello name="{{ name }}"></hello>
-<h1>Angular HTTP Basics</h1>
+<h1>NgFlix</h1>
 
-<button (click)="this.appService.getPosts()">Get Posts</button>
-
-<div *ngFor="let post of posts | async">
-
-  {{ post | json }}
-
-</div>
 <div *ngFor="let movie of movies.results">
+  <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="">
   <h1>{{movie.original_title}}</h1>
-  {{movie | json}}
+  <p>{{movie.overview}}</p>
+  <ul>
+    <li>Popularity - {{movie.popularity}}</li>
+<li>Votes - {{movie.vote_count}}</li>
+<li>Release Date - {{movie.release_date}}</li>
+  </ul>
 </div>
-<button (click)="createPost()">Create Post</button>
-<hr>
-
-{{ newPost | async | json }}
