@@ -5,11 +5,12 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import {NavBarComponent} from "../navbar/navbar.component";
+import {MoviesComponent} from "../movies/movies.component";
 import {AppService} from './app.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
-  declarations: [ AppComponent, NavBarComponent ],
+  declarations: [ AppComponent, NavBarComponent, MoviesComponent ],
   providers: [AppService],
   bootstrap:    [ AppComponent ]
 })

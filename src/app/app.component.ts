@@ -11,7 +11,7 @@ export class AppComponent implements OnInit  {
 
   constructor(private appService: AppService) {}
  
- movies: any[] = [];
+ movies: any[];
 
  ngOnInit() {
    this.appService.getMovies()
